@@ -21,19 +21,17 @@ function Movies() {
   }
 
   return (
-    <div>
-      {/* SECTION 1 */}
-      <section>
+    <div className="movies-page">
+      <section className="header-section">
         <h1>Star Wars Movies</h1>
-        <button onClick={fetchMovies} disabled={loading}>
+        <button className="fetch-btn" onClick={fetchMovies} disabled={loading}>
           {loading ? "Fetching..." : "Fetch Movies"}
         </button>
       </section>
 
-      {/* SECTION 2 */}
       {showList && (
         <section>
-          {loading && <h2>Loading...</h2>}
+          {loading && <p className="loading-text">Loading...</p>}
           {!loading && <MovieList movies={movies} />}
         </section>
       )}
