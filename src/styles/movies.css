@@ -74,7 +74,7 @@ body {
 
 .movie-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 40px rgba(253, 252, 252, 0.932);
 }
 
 .movie-card h3 {
@@ -89,7 +89,6 @@ body {
   margin-bottom: 6px;
 }
 
-/* ---- LOADING ---- */
 .loading-text {
   text-align: center;
   font-size: 1.2rem;
