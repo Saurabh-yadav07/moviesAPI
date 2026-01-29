@@ -16,15 +16,16 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
+  text-align: center;
 }
 
-/* ---- SECTION 1 ---- */
+/* ---- HEADER ---- */
 .header-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .header-section h1 {
@@ -33,7 +34,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* ---- BUTTON ---- */
+/* ---- FETCH BUTTON ---- */
 .fetch-btn {
   background: linear-gradient(135deg, #6366f1, #8b5cf6);
   border: none;
@@ -43,7 +44,9 @@ body {
   color: white;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .fetch-btn:hover {
@@ -56,8 +59,51 @@ body {
   cursor: not-allowed;
 }
 
+/* ---- ADD MOVIE FORM (NEW) ---- */
+.add-movie-form {
+  margin: 32px auto;
+  padding: 24px;
+  max-width: 700px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+
+  background: #161b22;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.add-movie-form input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+  background-color: #0f1117;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.add-movie-form input:focus {
+  outline: none;
+  border-color: #8b5cf6;
+}
+
+.add-movie-form button {
+  background: linear-gradient(135deg, #212124, #a07bf5);
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
 /* ---- MOVIE LIST ---- */
 .movie-list {
+  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 24px;
@@ -69,12 +115,15 @@ body {
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  text-align: left;
 }
 
 .movie-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(253, 252, 252, 0.932);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
 .movie-card h3 {
@@ -89,8 +138,15 @@ body {
   margin-bottom: 6px;
 }
 
+/* ---- STATES ---- */
 .loading-text {
   text-align: center;
   font-size: 1.2rem;
   color: #9ca3af;
+}
+
+.error-text {
+  margin-top: 16px;
+  color: #f87171;
+  text-align: center;
 }
