@@ -150,3 +150,17 @@ body {
   color: #f87171;
   text-align: center;
 }
+
+.delete-btn {
+  background: linear-gradient(135deg, #212124, #36343b);
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  grid-column: 1 / -1;
+  justify-self: center;
+
+}

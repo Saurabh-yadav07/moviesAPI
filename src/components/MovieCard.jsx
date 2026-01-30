@@ -1,10 +1,14 @@
-function MovieCard({ movie }) {
+function MovieCard({ movie, onDelete }) {
   return (
     <div className="movie-card">
       <h3>{movie.title}</h3>
-      <p>Episode: {movie.episode_id}</p>
+
+      <p>Year: {movie.year}</p>
       <p>Director: {movie.director}</p>
-      <p>Release Date: {movie.release_date}</p>
+
+      <button className="delete-btn" onClick={() =>{ onDelete(movie.id)}}>
+        Delete
+      </button>
     </div>
   );
 }
